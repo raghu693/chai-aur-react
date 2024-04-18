@@ -2,21 +2,24 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
+  //Hooks
   const [count, setCount] = useState(0)
 
-  let counter = 5
   let addvalue = ()=>{
     console.log(`working ${Math.random()}`);
-    counter = counter + 1
-    console.log(counter);
+    setCount(count + 1)
+  }
+  let removevalue = ()=>{
+    console.log(`working ${Math.random()}`);
+    setCount(count - 1)
   }
 
   return (
     <>
     <h1>Hello, world</h1>
-    <h2>Counter Value : {counter}</h2>
+    <h2>Counter Value : {count}</h2>
     <button onClick={addvalue}>Add value</button><br /><br />
-    <button>remove value</button>
+    <button onClick={removevalue}>remove value</button>
     </>
   )
 }
