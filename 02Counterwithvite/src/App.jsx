@@ -18,8 +18,8 @@ function App() {
     <>
     <h1>Hello, world</h1>
     <h2>Counter Value : {count}</h2>
-    <button onClick={addvalue}>Add value</button><br /><br />
-    <button onClick={removevalue}>remove value</button>
+    <button disabled={count >= 20} onClick={addvalue}>Add value</button><br /><br />
+    <button disabled={count <= 0} onClick={removevalue}>remove value</button>
     </>
   )
 }
